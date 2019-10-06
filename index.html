@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <title>To Do List</title>
+</head>
+
+<body>
+  <div class="add-wrapper">
+    <svg class="add-notion" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="8" cy="8" r="8" fill="#08B783" />
+      <path
+        d="M4.71429 7.28571H7.14286C7.22175 7.28571 7.28571 7.22175 7.28571 7.14286V4.71429C7.28571 4.31982 7.60554 4 8 4C8.39446 4 8.71429 4.31982 8.71429 4.71429V7.14286C8.71429 7.22175 8.77825 7.28571 8.85714 7.28571H11.2857C11.6802 7.28571 12 7.60554 12 8C12 8.39446 11.6802 8.71429 11.2857 8.71429H8.85714C8.77825 8.71429 8.71429 8.77825 8.71429 8.85714V11.2857C8.71429 11.6802 8.39446 12 8 12C7.60554 12 7.28571 11.6802 7.28571 11.2857V8.85714C7.28571 8.77825 7.22175 8.71429 7.14286 8.71429H4.71429C4.31982 8.71429 4 8.39446 4 8C4 7.60554 4.31982 7.28571 4.71429 7.28571Z"
+        fill="white" />
+    </svg>
+  
+    <span class="add-title">New note</span>
+  </div>
+
+
+
+  <form class="form">
+    <h3>Create note</h3>
+    <svg class="x-mark" fill="#F03D3C" height="17" viewBox="0 0 192 192" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M128 32v-8a24 24 0 00-24-24H88a24 24 0 00-24 24v8H8v16h176V32zm-48-8a8 8 0 018-8h16a8 8 0 018 8v8H80zM30 171a24 24 0 0024 21h84a24 24 0 0024-21l12-115H18zm98-100l16 2-8 96-16-2zm-40 1h16v96H88zm-24-1l8 96-16 2-8-96z"/></svg>
+  
+    <div class="input-wrap">
+      <span class="title-text">Title:</span>
+      <input type="text" class="title" required>
+    </div>
+  
+    <div class="input-wrap">
+      <span class="title-inner-text">Text:</span>
+      <textarea class="note-text"></textarea>
+    </div>
+  
+    <div class="color-panel">
+      <p class="color-title">Color:</p>
+      <div class="color-list">
+        <span class="color" data-color="#D6F0E8" data-checked></span>
+        <span class="color" data-color="#FBF3DF"></span>
+        <span class="color" data-color="#FAEFEF"></span>
+        <span class="color" data-color="#D7F0FA"></span>
+        <span class="color" data-color="#EFEDF9"></span>
+      </div>
+    </div>
+
+    <div class="control-panel">
+      <button class="accept">Create</button>
+    </div>
+  </form>
+
+  <ul class="notion-container">
+    <li hidden class="notion">
+      <header class="header">
+        <h2>Title</h2>
+        <svg class="remove" fill="#F03D3C" height="17" viewBox="0 0 192 192" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M128 32v-8a24 24 0 00-24-24H88a24 24 0 00-24 24v8H8v16h176V32zm-48-8a8 8 0 018-8h16a8 8 0 018 8v8H80zM30 171a24 24 0 0024 21h84a24 24 0 0024-21l12-115H18zm98-100l16 2-8 96-16-2zm-40 1h16v96H88zm-24-1l8 96-16 2-8-96z"/></svg>
+      </header>
+      <textarea placeholder="Add new notion..." class="notion-item-input"></textarea>
+    </li>
+  </ul>
+
+
+
+  <script src="module.js"></script>
+  <script src="storage.js"></script>
+  <script src="utils.js"></script>
+  <script src="notion.js"></script>
+  <script src="formCreator.js"></script>
+  <script src="notionContainer.js"></script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>
